@@ -1,0 +1,13 @@
+com\showTime\aiservice\enums\ResultCode.class
+com\showTime\aiservice\models\db\MovieListData.class
+com\showTime\aiservice\abstraction\MovieApiAbstractionLayer.class
+com\showTime\aiservice\models\api\ResultStatusInfo.class
+com\showTime\aiservice\repository\MovieDescriptionRepository.class
+com\showTime\aiservice\models\api\CreateNewMovieRequestBody.class
+com\showTime\aiservice\models\api\CreateNewUserResponseBody.class
+com\showTime\aiservice\models\db\MovieData.class
+com\showTime\aiservice\util\IdGenerationUtil.class
+com\showTime\aiservice\controller\MovieController.class
+com\showTime\aiservice\repository\UserDescriptionRepository.class
+com\showTime\aiservice\models\db\Userdata.class
+com\showTime\aiservice\models\api\ShowTimeResponseBody.class
