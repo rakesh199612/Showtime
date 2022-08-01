@@ -50,11 +50,11 @@ public class MovieApiAbstractionLayer {
         return apiResponse;
     }
 
-    public ShowTimeResponseBody<String> handleCreateNewUser(@NotNull CreateNewUserResponseBody createNewUser){
+    public ShowTimeResponseBody<String> handleCreateNewUser(CreateNewUserResponseBody createNewUser){
         ShowTimeResponseBody<String> apiResponse=new ShowTimeResponseBody<>();
         ResultStatusInfo resultStatusInfo=new ResultStatusInfo();
         Userdata uData=new Userdata();
-        String userID= IdGenerationUtil.generateUserIdentifier(createNewUser.getFirstName());
+        String userID= IdGenerationUtil.generateUserIdentifier(createNewUser.getEmail());
         uData.setU_id(userID);
         uData.setEmail(createNewUser.getEmail());
         uData.setPassword(createNewUser.getPassword());
@@ -77,7 +77,7 @@ public class MovieApiAbstractionLayer {
 
     }
 
-    public ShowTimeResponseBody handleGetUser(String email,String password, String userType){
+    public ShowTimeResponseBody<Userdata> handleGetUser(String email,String password, String userType){
         ShowTimeResponseBody<Userdata> apiResponse=new ShowTimeResponseBody<>();
         ResultStatusInfo resultStatusInfo=new ResultStatusInfo();
         Userdata uData=new Userdata();

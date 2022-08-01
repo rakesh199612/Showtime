@@ -5,6 +5,7 @@ import com.showTime.aiservice.models.api.CreateNewMovieRequestBody;
 import com.showTime.aiservice.models.api.CreateNewUserResponseBody;
 import com.showTime.aiservice.models.api.ShowTimeResponseBody;
 import com.showTime.aiservice.models.db.MovieData;
+import com.showTime.aiservice.models.db.Userdata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class MovieController {
     }
 
     @GetMapping("userLogin")
-    public ShowTimeResponseBody<String> getUser(@RequestParam String email, @RequestParam String password, @RequestParam String userType){
+    public ShowTimeResponseBody<Userdata> getUser(@RequestParam String email, @RequestParam String password, @RequestParam String userType){
         return movieApiHandler.handleGetUser(email,password,userType);
     }
 

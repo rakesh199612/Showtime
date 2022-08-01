@@ -12,6 +12,6 @@ public class CreateNewUserResponseBody {
     private String password;
     private String userType;
     private String location;
-    private int phone_no;
+    private double phone_no;
 
 }
